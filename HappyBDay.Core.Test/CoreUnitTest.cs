@@ -12,7 +12,7 @@ namespace Tests
         [Test]
         public void CoreTest1()
         {
-            var one = 1;
+            var one = 3;
             var two = 3;
             var result = 0;
 
