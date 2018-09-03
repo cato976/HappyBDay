@@ -1,0 +1,20 @@
+#!/bin/sh
+@echo off
+echo "Commit seen..."
+
+eval "'c:/Program Files/dotnet/dotnet'" " test HappyBDay.Core.Test"
+UNIT_TEST_EXIT_CODE=$?
+if [[ ${UNIT_TEST_EXIT_CODE} -ne 0 ]];
+then
+    printf '\n\n'
+    echo "Tests failed. Commit aborted."
+    printf '\n\n'
+
+    exit 1;
+else
+    @echo off
+    printf '\n\n'
+    echo "Commit test passed, allowing commit."
+    printf '\n\n'
+    exit 0;
+fi
