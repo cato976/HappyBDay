@@ -2,7 +2,7 @@
 @echo off
 echo "Commit seen..."
 
-eval "'c:/Program Files/dotnet/dotnet'" " test HappyBDay.Core.Test"
+eval "'c:/Program Files/dotnet/dotnet'" " test -c Debug HappyBDay.Core.Test"
 UNIT_TEST_EXIT_CODE=$?
 if [[ ${UNIT_TEST_EXIT_CODE} -ne 0 ]];
 then
